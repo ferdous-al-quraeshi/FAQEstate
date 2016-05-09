@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="RealEstateApp" lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>FAQ Real Estate</title>
+
+	<!-- Scripts -->
+	<!-- <script src="https://cdn.rawgit.com/angular/code.angularjs.org/master/1.5.5/angular.min.js"></script> -->
+	<script src="components/angular/angular.min.js"></script>
+	<script src="components/angular/angular-route.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/controllers/HomeCtrl.js"></script>
+	<script src="app/controllers/Projects.Ctrl.js"></script>
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="components/boostrap-social/bootstrap-social.css">
+	<link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="styles/faq-realestate.css">
+
+</head>
+
+<body>
+<header data-ng-controller="HomeCtrl" class="container-fluid">
+	<div class="container">
+	<div class="col-xs-5" title="logo-text">{{logoTxt}}</div>
+	<nav class="col-xs-7">
+		<ul  id="main-menu">
+			<li data-ng-repeat="item in mainNavItems">
+				<a href="" class="active">{{item.name}}</a>
+			</li>
+			<!-- <li data-ng-repeat="item in mainNavItems" data-ng-mouseover="hoverIn()" data-ng-mouseleave="hoverOut()">
+				<a href="">{{item.name}}</a>
+				<ul id="sub-menu" data-ng-if="item.submenu && item.submenu.length" data-ng-mouseleave="hoverOut()">
+					<li data-ng-repeat="subitem in item.submenu" data-ng-show="hoverEdit">
+						<a href="">{{subitem.name}}</a>
+					</li>
+				</ul>
+			</li> -->
+		</ul>
+	</nav>
+</div>
+</header>
+
+
+
+<section id="mid-body-cont" class="container-fluid">
+	<!-- <div data-ng-include="projects.html" class="row"></div> -->
+	<div class="container">
+		<div class="project-card col-xs-3">Ongoing</div>
+		<div class="project-card col-xs-3">Upcoming</div>
+		<div class="project-card col-xs-3">Completed</div>
+	</div>
+</section>
+
+
+
+
+<footer data-ng-controller="HomeCtrl">
+	<div class="col-xs-4" title="footer-text">
+		<span>&copy;</span> {{footerTextCopy}}
+	</div>
+	<div id="social-btn" class="col-xs-8">
+		<a href="" class="btn btn-social-icon btn-facebook">
+    		<span class="fa fa-facebook"></span>
+  		</a>
+		<a href="" class="btn btn-social-icon btn-twitter">
+    		<span class="fa fa-twitter"></span>
+  		</a>
+	</div>
+</footer>
+
+</body>
+
+</html>
